@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexmoney Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="batch1">
+        <% if(condition) { %>
+            <div class="alert alert-danger text-center"><%=message%></div>
+        <% } %>
+
+        <div class="batch2">
+            <h1>Batch Available for current month</h1>
+            <div class="batch4">
+                <h4>Batch: 1 , Time: 6-7 AM , Slots Available: <%=slot1%></h4>
+                <h4>Batch: 2 , Time: 7-8 AM , Slots Available: <%=slot2%></h4>
+                <h4>Batch: 3 , Time: 8-9 AM , Slots Available: <%=slot3%></h4>
+                <h4>Batch: 4 , Time: 5-6 PM , Slots Available: <%=slot4%></h4>
+            </div>
+            <br>
+            <!-- <form action="/batch_select" method="POST">
+                <input name="selectBatch" id="password-register" class="form-control"  placeholder="Enter the batch number and click on proceed"
+                        required>
+                <button type="submit" class="btn btn-outline-primary">Proceed</button>
+            </form> -->
+            <div class="batch6">
+            <form action="/batch_select" method="POST">
+                <div class="input-group mb-3">
+                    <input name="selectBatch" type="text" class="form-control" placeholder="Enter the batch number and click on proceed" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Proceed</button>
+                </div>
+            </form>
+            </div>
+
+        </div>
+
+        <div class="batch3">
+
+            <h1>Batch Available for next month</h1>
+
+            <div class="batch5">
+                <h4>Batch: 1 , Time: 6-7 AM , Slots Available: <%=slot11%></h4>
+                <h4>Batch: 2 , Time: 7-8 AM , Slots Available: <%=slot22%></h4>
+                <h4>Batch: 3 , Time: 8-9 AM , Slots Available: <%=slot33%></h4>
+                <h4>Batch: 4 , Time: 5-6 PM , Slots Available: <%=slot44%></h4>
+            </div>
+            <br>
+            <!-- <form action="/batch_change" method="POST">
+                <input name="changeBatch" id="password-register" class="form-control"  placeholder="Enter the batch number and click on proceed"
+                        required>
+                <button type="submit" class="btn btn-outline-primary">Proceed</button>
+            </form> -->
+            <div class="batch6">
+            <form action="/batch_change" method="POST">
+                <div class="input-group mb-3">
+                    <input name="changeBatch" type="text" class="form-control" placeholder="Enter the batch number and click on proceed" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Proceed</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
