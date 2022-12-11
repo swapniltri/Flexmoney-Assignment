@@ -22,7 +22,7 @@ exports.login = async function(req,res) {
                     res.render("login", { condition: true, message: "Invalid Username/Password, If you haven't signed up please signup first" });
                 }
             } else {
-                console.log("User not found");
+                // console.log("User not found");
                 res.render("login", { condition: true, message: "Invalid Username/Password, If you haven't signed up please signup first" });
             }
         }
@@ -277,7 +277,7 @@ exports.batch_select = async function(req,res){
                                 console.log(err);
                             }else{
                                 if(done){
-                                    console.log(done.batch1);
+                                    // console.log(done.batch1);
                                     res.render("home",{condition:false, name: req.session.username, batch1:batch1, batch2: done.batch2, amount: A});
                                 }
                             }
