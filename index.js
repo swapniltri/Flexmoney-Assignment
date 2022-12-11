@@ -43,6 +43,6 @@ app.use(session({
 
 app.use("/", routes);
 
-app.listen(4000, function(){
+app.listen(process.env.PORT || 4000, function(){
     console.log("listening on port: 4000");
 });
